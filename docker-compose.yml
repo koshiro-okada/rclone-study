@@ -9,3 +9,10 @@ services:
     command: /sbin/init
     ports:
       - "22:22"
+  rclone-server:
+    build:
+      context: .
+      dockerfile: ./rclone-server/Dockerfile
+    container_name: rclone-server
+    hostname: rclone-server
+    tty: true
