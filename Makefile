@@ -1,11 +1,16 @@
-.PHONY: restart-sshd
-
+.PHONY: status-sshd
 status-sshd:
 	docker compose exec sftp-server systemctl status sshd
+
+.PHONY: restart-sshd
 restart-sshd:
 	docker compose exec sftp-server systemctl restart sshd
+
+.PHONY: check-file-exist
 check-file-exist:
 	docker compose exec rclone-server rclone lsjson sftp:/root/SAMPLE/sample.txt
+
+.PHONY: check-file-exist-with-bitnami-rclone-image
 check-file-exist-with-bitnami-rclone-image:
 	docker run --rm \
 	--mount type=bind,source=$(shell pwd)/rclone-server/rclone.conf,target=/.rclone.conf \
