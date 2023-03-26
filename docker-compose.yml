@@ -16,3 +16,5 @@ services:
     container_name: rclone-server
     hostname: rclone-server
     tty: true
+    env_file:
+      - ./rclone-server/sftp-connection.env
