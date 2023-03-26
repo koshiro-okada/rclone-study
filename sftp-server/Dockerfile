@@ -1,8 +1,7 @@
 FROM quay.io/centos/centos:stream8
 
 RUN yum update -y && \
-    yum install -y openssh-server && \
-    yum install -y python39
+    yum install -y openssh-server
 
 RUN sed -ri 's/^#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config \
  && echo 'root:password' | chpasswd
