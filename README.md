@@ -32,5 +32,5 @@ https://rclone.org/sftp/ を参考に環境変数を設定している (`rclone-
 - RCLONE_SFTP_KEY_PEM
     - `awk '{printf "%s\\\\n", $0}' < id_rsa`で改行部分を`\\n`にエスケープしている
 - RCLONE_SFTP_KEY_FILE_PASS
-    - `rclone obscure "passphrase"`でパスワードを隠蔽している
+    - `rclone obscure "passphrase"`でパスフレーズを隠蔽している
 
