@@ -1,0 +1,11 @@
+services:
+  sftp-server:
+    build:
+      context: .
+      dockerfile: ./sftp-server/Dockerfile
+    container_name: sftp-server
+    hostname: sftp-server
+    privileged: true
+    command: /sbin/init
+    ports:
+      - "22:22"
