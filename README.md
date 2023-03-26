@@ -22,3 +22,15 @@
 - 接続方式はSFTPで公開鍵認証+パスフレーズあり
     - 秘密鍵: プロジェクトルートディレクトリに配置されている`id_rsa`
     - パスフレーズ: `passphrase`
+
+### Rcloneの環境変数
+
+https://rclone.org/sftp/ を参考に環境変数を設定している (`rclone-server/sftp-connection.env`)
+
+- RCLONE_SFTP_HOST
+- RCLONE_SFTP_USER
+- RCLONE_SFTP_KEY_PEM
+    - `awk '{printf "%s\\\\n", $0}' < id_rsa`で改行部分を`\\n`にエスケープしている
+- RCLONE_SFTP_KEY_FILE_PASS
+    - `rclone obscure "passphrase"`でパスワードを隠蔽している
+
