@@ -10,6 +10,8 @@ COPY sftp-server/.ssh/ /root/.ssh/
 RUN chmod 700 /root/.ssh
 RUN chmod 644 /root/.ssh/authorized_keys
 
+COPY sftp-server/SAMPLE /root/SAMPLE
+
 WORKDIR /root
 
 CMD systemctl start sshd
