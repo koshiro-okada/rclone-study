@@ -28,7 +28,9 @@
 
 ### Rcloneの環境変数
 
-https://rclone.org/sftp/ を参考に環境変数を設定している (`rclone-server/sftp-connection.env`)
+https://rclone.org/sftp/ を参考に環境変数を設定している (`rclone-server/rclone.env`)
+
+#### SFTP
 
 - RCLONE_SFTP_HOST
 - RCLONE_SFTP_USER
@@ -37,3 +39,10 @@ https://rclone.org/sftp/ を参考に環境変数を設定している (`rclone-
 - RCLONE_SFTP_KEY_FILE_PASS
     - `rclone obscure "passphrase"`でパスフレーズを隠蔽している
 
+#### AWS
+- RCLONE_S3_PROVIDER
+    - 値が`AWS`だとLocalStackではうまく動かないので`Other`を設定する
+- RCLONE_S3_ACCESS_KEY_ID
+- RCLONE_S3_SECRET_ACCESS_KEY
+- RCLONE_S3_REGION
+- RCLONE_S3_ENDPOINT
