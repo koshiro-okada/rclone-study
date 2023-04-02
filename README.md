@@ -39,7 +39,7 @@ https://rclone.org/sftp/ を参考に環境変数を設定している (`rclone-
 - RCLONE_SFTP_KEY_FILE_PASS
     - `rclone obscure "passphrase"`でパスフレーズを隠蔽している
 
-#### AWS
+#### S3
 - RCLONE_S3_PROVIDER
     - 値が`AWS`だとLocalStackではうまく動かないので`Other`を設定する
 - RCLONE_S3_ACCESS_KEY_ID
