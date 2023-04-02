@@ -14,6 +14,5 @@ COPY sftp-server/SAMPLE /root/SAMPLE
 
 WORKDIR /root
 
-CMD systemctl start sshd
-
 EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
