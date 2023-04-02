@@ -17,7 +17,7 @@ services:
     hostname: rclone-server
     tty: true
     env_file:
-      - ./rclone-server/sftp-connection.env
+      - ./rclone-server/rclone.env
   S3:
     image: localstack/localstack:2.0.0
     ports:
