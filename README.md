@@ -5,7 +5,7 @@
 - SFTP接続先コンテナ
     - OS: CentOS Stream 8
 - S3コンテナ
-    - 未対応
+    - LocalStack
 - Rcloneコンテナ
     - OS: CentOS Stream 8
     - rcloneコマンド使用可能
