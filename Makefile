@@ -1,11 +1,3 @@
-.PHONY: status-sshd
-status-sshd:
-	docker compose exec sftp-server systemctl status sshd
-
-.PHONY: restart-sshd
-restart-sshd:
-	docker compose exec sftp-server systemctl restart sshd
-
 .PHONY: check-file-exist
 check-file-exist:
 	docker compose exec rclone-server rclone lsjson sftp:/root/SAMPLE/sample.txt
