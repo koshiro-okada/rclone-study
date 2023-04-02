@@ -14,7 +14,9 @@
 
 - [x] Rcloneを通じて対象のファイルがサーバに存在するか確認することができる
     - `make check-file-exist`
-- [ ] Rcloneを通じてサーバからS3にファイルコピーをすることができる
+- [x] Rcloneを通じてサーバからS3にファイルコピーをすることができる
+    - `make copy-file-to-s3` (ファイルをコピー)
+    - `make check-if-file-exists-in-s3` (ファイルがS3に存在するか確認)
 
 ## 備考
 
